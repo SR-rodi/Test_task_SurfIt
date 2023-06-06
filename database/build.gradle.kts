@@ -2,6 +2,9 @@
 plugins {
     id (Plugins.library)
     id (Plugins.kotlin)
+    id (Plugins.ksp)
+
+
 }
 
 android {
@@ -28,6 +31,11 @@ android {
 }
 
 dependencies {
+
+    implementation (Dependencies.Database.roomRuntime)
+    implementation (Dependencies.Database.room)
+    annotationProcessor (Dependencies.Database.roomAnnotation)
+    ksp (Dependencies.Database.ksp)
 
     implementation(Dependencies.Compose.activityCompose)
     implementation(platform(Dependencies.Compose.composeBom))
