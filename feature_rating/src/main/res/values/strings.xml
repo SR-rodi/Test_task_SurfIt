@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="registration_search_hint">Введите имя</string>
+    <string name="registration_user_name">Имя :</string>
+    <string name="registration_user_email">e-mail :</string>
+    <string name="registration_user_step_count">Шаги :</string>
+    <string name="registration_user_mode">Режим :</string>
+
+    <string name="registration_sorter_id">Id</string>
+    <string name="registration_sorter_mode">Режим</string>
+    <string name="registration_sorter_step">Пройденные шаги</string>
+    <string name="registration_sorter_name">Имени Пользователя</string>
+    <string name="registration_sorter_email">E-mail</string>
+
+    <string-array name="SorterItems">
+        <item>Id</item>
+        <item>Режим</item>
+        <item>Пройденные шаги</item>
+        <item>Имени Пользователя</item>
+        <item>E-mail</item>
+    </string-array>
+
+</resources>

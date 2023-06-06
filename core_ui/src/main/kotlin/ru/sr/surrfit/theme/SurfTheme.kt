@@ -13,7 +13,7 @@ fun SurfTheme(
     isNightMode: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
-    MaterialTheme() {
+    MaterialTheme {
         val colors = if (isNightMode) darkPalette else lightPalette
         CompositionLocalProvider(
             LocalColorProvider provides colors,

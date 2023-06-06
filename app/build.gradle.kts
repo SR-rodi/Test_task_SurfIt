@@ -44,7 +44,9 @@ dependencies {
 
     implementation(project(Module.navGraph))
     implementation(project(Module.coreUi))
+    implementation(project(Module.core))
     implementation(project(Module.database))
+    implementation(project(Module.featureRating))
 
     implementation(Dependencies.Navigation.navigate)
 

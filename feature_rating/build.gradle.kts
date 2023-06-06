@@ -2,6 +2,7 @@
 plugins {
     id (Plugins.library)
     id (Plugins.kotlin)
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -30,6 +31,12 @@ android {
 dependencies {
 
     implementation(project(Module.coreUi))
+    implementation(project(Module.core))
+    implementation(project(Module.database))
+
+    implementation(Dependencies.Di.koin)
+    implementation(Dependencies.Di.koinCompose)
+    implementation(Dependencies.Di.koinAndroid)
 
     implementation(Dependencies.Compose.activityCompose)
     implementation(platform(Dependencies.Compose.composeBom))

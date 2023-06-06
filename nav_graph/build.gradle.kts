@@ -30,6 +30,8 @@ android {
 dependencies {
 
     implementation(project(Module.featureRating))
+    implementation(project(Module.core))
+    implementation(project(Module.coreUi))
 
     implementation(Dependencies.Navigation.navigate)
 

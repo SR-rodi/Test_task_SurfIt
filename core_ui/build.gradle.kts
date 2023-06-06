@@ -1,7 +1,6 @@
-
 plugins {
-    id (Plugins.library)
-    id (Plugins.kotlin)
+    id(Plugins.library)
+    id(Plugins.kotlin)
 }
 
 android {
@@ -14,9 +13,9 @@ android {
         compose = true
     }
 
-    compileOptions   {
+    compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility  = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
         jvmTarget = Config.jmvTarget
@@ -29,9 +28,10 @@ android {
 
 dependencies {
 
-    implementation("androidx.navigation:navigation-compose:2.5.3")
+
     implementation(project(Module.core))
 
+    implementation(Dependencies.Navigation.navigate)
     implementation(Dependencies.Compose.activityCompose)
     implementation(platform(Dependencies.Compose.composeBom))
     implementation(Dependencies.Compose.composeUi)
