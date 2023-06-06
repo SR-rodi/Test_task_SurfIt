@@ -44,8 +44,13 @@ dependencies {
 
     implementation(project(Module.navGraph))
     implementation(project(Module.coreUi))
+    implementation(project(Module.database))
 
     implementation(Dependencies.Navigation.navigate)
+
+    implementation(Dependencies.Di.koin)
+
+    implementation(Dependencies.Database.room)
 
     implementation(Dependencies.Core.coreKtx)
     implementation(platform(Dependencies.Core.kotlinBoom))

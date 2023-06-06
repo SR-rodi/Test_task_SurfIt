@@ -3,4 +3,5 @@ object Module {
     const val core = ":core"
     const val featureRating = ":feature_rating"
     const val navGraph = ":nav_graph"
+    const val database = ":database"
 }
