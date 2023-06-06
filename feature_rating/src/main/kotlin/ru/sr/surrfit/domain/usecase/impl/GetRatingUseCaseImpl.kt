@@ -8,7 +8,7 @@ import ru.sr.surrfit.domain.usecase.GetRatingUseCase
 class GetRatingUseCaseImpl(
     private val repository: RatingLocalRepository,
 ) : GetRatingUseCase {
-    override suspend fun getItemsByFilter(sorter: String): List<RatingDomainModel> {
-        return repository.getAllItems(sorter)
+    override suspend fun getItemsByFilter(sorter: RatingSorter): List<RatingDomainModel> {
+        return repository.getAllItemsSorted(sorter)
     }
 }

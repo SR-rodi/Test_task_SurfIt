@@ -1,28 +1,30 @@
 package ru.sr.surrfit.presentation.rating.compose.screen
 
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.Modifier
 import org.koin.androidx.compose.koinViewModel
-import ru.sr.surrfit.base.BaseViewModel
 import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.presentation.rating.compose.view.RatingView
 import ru.sr.surrfit.presentation.rating.viewmodel.RatingEvent
 import ru.sr.surrfit.presentation.rating.viewmodel.RatingViewModel
-import ru.sr.surrfit.theme.SurfTheme
 import ru.sr.surrfit.view.Screen
 
 @Composable
 fun RatingScreen(viewModel: RatingViewModel = koinViewModel()) {
 
-    LaunchedEffect(key1 = true){
-        viewModel.obtainEvent(RatingEvent.OnGetRatingByFilter(RatingSorter.MODE))
+    LaunchedEffect(key1 = true) {
+        viewModel.obtainEvent(RatingEvent.OnGetRatingBySorter(RatingSorter.ID))
     }
 
-    Screen(viewModel = viewModel) {state, action, navController ->
-        Text(
-            text = "Привет RatingScreen",
-            style = SurfTheme.fonts.h1.copy(color = SurfTheme.colors.error)
-        )
+    Screen(viewModel = viewModel) { state, action, navController ->
+        Column(modifier = Modifier.fillMaxSize()) {
+            RatingView(state) { ratingEvent ->
+                viewModel.obtainEvent(ratingEvent)
+            }
+        }
     }
 
 }
