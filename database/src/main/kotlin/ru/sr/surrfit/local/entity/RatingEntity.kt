@@ -15,6 +15,6 @@ class RatingEntity(
     @ColumnInfo(name = "email")
     val email: String,
     @PrimaryKey
-    @ColumnInfo(name = "position")
+    @ColumnInfo(name = "id")
     val id: Int? = null,
 )

@@ -9,8 +9,8 @@ import ru.sr.surrfit.local.entity.RatingEntity
 
 @Dao
 interface RatingDao {
-    @Query("SELECT*FROM rating")
-    fun getAll(): List<RatingEntity>
+    @Query("SELECT*FROM rating ORDER BY :sorter ")
+    fun getAllFromSorter(sorter: String): List<RatingEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(gameListEntity: RatingEntity)

@@ -46,8 +46,8 @@ abstract class BaseViewModel<State : Any, Action : Any, Event : Any>(initialStat
     protected inline fun scopeLaunch(
         context: CoroutineContext = EmptyCoroutineContext,
         crossinline works: suspend (CoroutineScope) -> Unit,
-    ) {
-        viewModelScope.launch(context) {
+    ): Job {
+       return viewModelScope.launch(context) {
             works(this)
         }
     }
