@@ -42,6 +42,11 @@ android {
 
 dependencies {
 
+    implementation(project(Module.navGraph))
+    implementation(project(Module.coreUi))
+
+    implementation(Dependencies.Navigation.navigate)
+
     implementation(Dependencies.Core.coreKtx)
     implementation(platform(Dependencies.Core.kotlinBoom))
     implementation(Dependencies.Core.lifecycle)
