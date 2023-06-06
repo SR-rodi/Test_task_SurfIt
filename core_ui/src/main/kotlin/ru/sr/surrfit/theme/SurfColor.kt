@@ -5,7 +5,6 @@ import androidx.compose.ui.graphics.Color
 
 data class SurfColor(
     val background: Color,
-    val error: Color,
     val green:Color,
     val text: Color,
     val titleText:Color,
@@ -14,7 +13,6 @@ data class SurfColor(
 val lightPalette = SurfColor(
     background = Color(0xFFC4F3F3),
     text = Color(0xFF070707),
-    error = Color(0xFFC00A0A),
     green  = Color(0xFF55847A),
     titleText = Color(0xFFC4F3F3)
 )

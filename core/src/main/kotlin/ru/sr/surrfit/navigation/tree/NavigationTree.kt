@@ -1,5 +1,5 @@
 package ru.sr.surrfit.navigation.tree
 
-enum class NavigationTree {
-    RatingScreen,PrefillScreen
+enum class NavigationTree(val key: String = "") {
+    RatingScreen, PrefillScreen, DetailScreen("detailRating")
 }

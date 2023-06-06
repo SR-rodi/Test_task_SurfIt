@@ -10,7 +10,7 @@ import ru.sr.surrfit.domain.usecase.GetRatingUseCase
 import ru.sr.surrfit.domain.usecase.InsertRatingUseCase
 import ru.sr.surrfit.domain.usecase.impl.GetRatingUseCaseImpl
 import ru.sr.surrfit.domain.usecase.impl.InsertRatingUseCaseImpl
-import ru.sr.surrfit.presentation.prefill.presentation.viewmodel.PrefillViewModel
+import ru.sr.surrfit.presentation.prefill.viewmodel.PrefillViewModel
 import ru.sr.surrfit.presentation.rating.viewmodel.RatingViewModel
 
 fun ratingModule() = listOf(repositoryModule(), useCaseModule(), viewModelModule())

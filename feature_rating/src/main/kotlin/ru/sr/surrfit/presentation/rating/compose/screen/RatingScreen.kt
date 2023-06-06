@@ -7,7 +7,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import org.koin.androidx.compose.koinViewModel
 import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.navigation.push
+import ru.sr.surrfit.navigation.tree.NavigationTree
 import ru.sr.surrfit.presentation.rating.compose.view.RatingView
+import ru.sr.surrfit.presentation.rating.viewmodel.RatingAction
 import ru.sr.surrfit.presentation.rating.viewmodel.RatingEvent
 import ru.sr.surrfit.presentation.rating.viewmodel.RatingViewModel
 import ru.sr.surrfit.view.Screen
@@ -21,8 +24,14 @@ fun RatingScreen(viewModel: RatingViewModel = koinViewModel()) {
 
     Screen(viewModel = viewModel) { state, action, navController ->
         Column(modifier = Modifier.fillMaxSize()) {
-            RatingView(state) { ratingEvent ->
-                viewModel.obtainEvent(ratingEvent)
+            RatingView(state) { ratingEvent -> viewModel.obtainEvent(ratingEvent) }
+
+            when (action) {
+                is RatingAction.OpenDetailScreen -> {
+                    navController.push(NavigationTree.DetailScreen, params = action.ratingItem)
+                    viewModel.obtainEvent(RatingEvent.ResetAction)
+                }
+                null -> {}
             }
         }
     }

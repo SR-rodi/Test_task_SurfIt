@@ -1,4 +1,4 @@
-package ru.sr.surrfit.presentation.prefill.presentation.viewmodel
+package ru.sr.surrfit.presentation.prefill.viewmodel
 
 import ru.sr.surrfit.base.BaseViewModel
 import ru.sr.surrfit.dispatcherwrapper.SurfDispatcher

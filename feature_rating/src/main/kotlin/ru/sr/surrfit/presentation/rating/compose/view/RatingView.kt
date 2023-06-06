@@ -22,14 +22,16 @@ fun RatingView(state: RatingState, eventHandler: (RatingEvent) -> Unit) {
             value = state.search,
             onValueChange = { newSearch -> eventHandler(RatingEvent.OnSearch(newSearch)) },
             searchItems = state.searchItems,
-            onClickTrailingIcon = { eventHandler(RatingEvent.OnClearSearch) }
+            onClickTrailingIcon = { eventHandler(RatingEvent.OnClearSearch) },
+            onClickItem = { ratingItem -> eventHandler(RatingEvent.OnClickItemRating(ratingItem)) }
         )
         Spacer(modifier = Modifier.size(8.dp))
         RatingSorterView(eventHandler = eventHandler)
         Spacer(modifier = Modifier.size(8.dp))
         ListRatingItemsView(
             ratingItems = state.items,
-            paddingValues = PaddingValues(horizontal = 16.dp)
+            paddingValues = PaddingValues(horizontal = 16.dp),
+            eventHandler = eventHandler
         )
     }
 

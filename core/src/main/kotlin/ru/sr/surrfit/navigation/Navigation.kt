@@ -19,6 +19,20 @@ internal fun NavOptionsBuilder.setPopUp(destination: String?, launchFlag: Launch
 }
 
 
+fun <I> NavController.push(
+    route: NavigationTree,
+    params: I,
+    launchFlag: LaunchFlag = LaunchFlag.SimpleNavigation,
+) {
+    currentBackStackEntry?.savedStateHandle?.set(
+        key = route.key,
+        value = params,
+    )
+    navigate(route.name) {
+        setPopUp(currentDestination?.route, launchFlag)
+    }
+}
+
 fun NavController.push(
     route: NavigationTree,
     launchFlag: LaunchFlag = LaunchFlag.SimpleNavigation,

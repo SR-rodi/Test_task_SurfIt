@@ -9,12 +9,14 @@ data class SurfShapes(
     val small: Shape,
     val medium: Shape,
     val large: Shape,
+    val search:Shape
 )
 
 val shapes = SurfShapes(
     small = RoundedCornerShape(8.dp),
     medium = RoundedCornerShape(12.dp),
     large = RoundedCornerShape(20.dp),
+    search = RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp),
 )
 
 val LocalShapeProvider =
