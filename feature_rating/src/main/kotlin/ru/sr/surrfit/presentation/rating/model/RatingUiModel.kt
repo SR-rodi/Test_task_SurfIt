@@ -1,4 +1,4 @@
-package ru.sr.surrfit.presentation.model
+package ru.sr.surrfit.presentation.rating.model
 
 class RatingUiModel(
     val id: Int,

@@ -29,6 +29,8 @@ android {
 
 dependencies {
 
+    implementation(Dependencies.Navigation.navigate)
+
     implementation(Dependencies.Compose.activityCompose)
     implementation(platform(Dependencies.Compose.composeBom))
     implementation(Dependencies.Compose.composeUi)

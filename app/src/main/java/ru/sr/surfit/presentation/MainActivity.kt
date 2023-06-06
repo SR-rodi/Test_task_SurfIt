@@ -1,19 +1,21 @@
-package ru.sr.surfit
+package ru.sr.surfit.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import ru.sr.surrfit.graph.setNavigate
 import ru.sr.surrfit.theme.LocalNavigateController
 import ru.sr.surrfit.theme.SurfTheme
-import ru.sr.surrfit.tree.NavigationTree
 
 class MainActivity : ComponentActivity() {
+
+    private val viewModel by viewModel<MainViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -23,7 +25,7 @@ class MainActivity : ComponentActivity() {
                         .background(SurfTheme.colors.background)
                         .fillMaxSize(),
                     navController = LocalNavigateController.current,
-                    startDestination = NavigationTree.RatingScreen.name
+                    startDestination = viewModel.getStartDestination().name
                 ) {
                     setNavigate()
                 }

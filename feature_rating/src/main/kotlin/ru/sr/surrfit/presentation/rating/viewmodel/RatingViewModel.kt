@@ -1,12 +1,12 @@
-package ru.sr.surrfit.presentation.viewmodel
+package ru.sr.surrfit.presentation.rating.viewmodel
 
 import android.util.Log
 import ru.sr.surrfit.base.BaseViewModel
 import ru.sr.surrfit.domain.model.RatingSorter
 import ru.sr.surrfit.dispatcherwrapper.SurfDispatcher
 import ru.sr.surrfit.domain.usecase.GetRatingUseCase
-import ru.sr.surrfit.presentation.model.RatingUiModel
-import ru.sr.surrfit.util.toUi
+import ru.sr.surrfit.presentation.rating.model.RatingUiModel
+import ru.sr.surrfit.mapper.toUi
 
 class RatingViewModel(
     private val getRatingUseCase: GetRatingUseCase,
@@ -24,7 +24,7 @@ class RatingViewModel(
         viewState = viewState.copy(isLoading = true)
 
         val ratingItems = getRatingUseCase.getItemsByFilter(sorter.fieldSorter).map { domain -> domain.toUi() }
-        Log.e("kart",ratingItems.toString())
+        Log.e("kart",ratingItems.size.toString())
         viewState = viewState.copy(isLoading = false, items = ratingItems)
     }
 }

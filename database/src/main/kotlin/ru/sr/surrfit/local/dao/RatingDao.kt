@@ -13,7 +13,7 @@ interface RatingDao {
     fun getAllFromSorter(sorter: String): List<RatingEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(gameListEntity: RatingEntity)
+    fun insert(ratingListEntity: List<RatingEntity>)
 
     @Query("DELETE FROM rating")
     fun deleteAll()
