@@ -17,11 +17,9 @@ class RatingLocalRepositoryImpl(private val ratingDao: RatingDao) : RatingLocalR
             RatingSorter.EMAIL -> ratingDao.getAllSortedByEmail()
             RatingSorter.ID -> ratingDao.getAllSortedById()
         }.map { entity -> entity.toDomain() }
-
     }
 
     override suspend fun insertItems(items: List<RatingDomainModel>) {
         ratingDao.insert(items.map { domain -> domain.toEntity() })
     }
-
 }

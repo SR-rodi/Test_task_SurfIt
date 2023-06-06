@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
@@ -21,14 +20,13 @@ fun DetailScreen(item: RatingUiModel) {
     val navController = LocalNavigateController.current
 
     IconButton(onClick = { navController.popBackStack() }) {
-        Icon(imageVector = Icons.Filled.ArrowBack, contentDescription ="" )
+        Icon(imageVector = Icons.Filled.ArrowBack, contentDescription = "")
     }
-
     Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp), contentAlignment = Alignment.Center
     ) {
-        RatingItemView(item){}
+        RatingItemView(item) {}
     }
 }

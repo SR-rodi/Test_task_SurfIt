@@ -13,7 +13,6 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 
-
 abstract class BaseViewModel<State : Any, Action : Any, Event : Any>(initialState: State) :
     ViewModel() {
 
@@ -26,7 +25,6 @@ abstract class BaseViewModel<State : Any, Action : Any, Event : Any>(initialStat
         set(value) {
             _viewStates.value = value
         }
-
 
     fun viewStates() = _viewStates.asStateFlow()
     fun viewActions() = _viewActions.asSharedFlow()
@@ -47,9 +45,8 @@ abstract class BaseViewModel<State : Any, Action : Any, Event : Any>(initialStat
         context: CoroutineContext = EmptyCoroutineContext,
         crossinline works: suspend (CoroutineScope) -> Unit,
     ): Job {
-       return viewModelScope.launch(context) {
+        return viewModelScope.launch(context) {
             works(this)
         }
     }
-
 }

@@ -5,7 +5,7 @@ import org.koin.androidx.compose.koinViewModel
 import ru.sr.surrfit.navigation.LaunchFlag
 import ru.sr.surrfit.navigation.push
 import ru.sr.surrfit.navigation.tree.NavigationTree
-import ru.sr.surrfit.presentation.prefill.viewmodel.PrefillAction
+import ru.sr.surrfit.presentation.prefill.viewmodel.model.PrefillAction
 import ru.sr.surrfit.presentation.prefill.viewmodel.PrefillViewModel
 import ru.sr.surrfit.view.Screen
 
@@ -15,6 +15,7 @@ fun PrefillScreen(viewModel: PrefillViewModel = koinViewModel()) {
         when (action) {
             PrefillAction.OpenRatingScreen ->
                 navController.push(NavigationTree.RatingScreen, LaunchFlag.ClearPrevious)
+
             null -> {}
         }
     }

@@ -6,4 +6,3 @@ interface FirstRunListener {
 
     fun getFirstRun(): Boolean
 }
-

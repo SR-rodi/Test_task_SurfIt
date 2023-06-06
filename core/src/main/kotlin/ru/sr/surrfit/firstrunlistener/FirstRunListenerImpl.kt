@@ -2,7 +2,7 @@ package ru.sr.surrfit.firstrunlistener
 
 import android.content.Context
 
-class FirstRunListenerImpl(context: Context): FirstRunListener {
+class FirstRunListenerImpl(context: Context) : FirstRunListener {
     private val preferenceFirstRun =
         context.getSharedPreferences(FirstRun, Context.MODE_PRIVATE)
 
@@ -12,7 +12,7 @@ class FirstRunListenerImpl(context: Context): FirstRunListener {
 
 
     override fun getFirstRun(): Boolean {
-       return preferenceFirstRun.getBoolean(IS_FIRST_RUN,false)
+        return preferenceFirstRun.getBoolean(IS_FIRST_RUN, false)
     }
 
     companion object {

@@ -39,7 +39,7 @@ object ItemsGeneration {
     fun getItems(repeatCounter: Int): List<RatingEntity> {
         val items = mutableListOf<RatingEntity>()
         repeat(repeatCounter) {
-            val email = emailStart[Random.nextInt(0, emailStart.lastIndex)]+
+            val email = emailStart[Random.nextInt(0, emailStart.lastIndex)] +
                     Random.nextInt(1000, 9999).toString() +
                     email_last[Random.nextInt(0, email_last.lastIndex)]
 

@@ -9,7 +9,7 @@ data class SurfShapes(
     val small: Shape,
     val medium: Shape,
     val large: Shape,
-    val search:Shape
+    val search: Shape,
 )
 
 val shapes = SurfShapes(

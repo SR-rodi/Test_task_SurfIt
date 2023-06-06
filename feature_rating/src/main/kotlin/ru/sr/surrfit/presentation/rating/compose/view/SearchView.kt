@@ -1,11 +1,6 @@
 package ru.sr.surrfit.presentation.rating.compose.view
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideIn
-import androidx.compose.animation.slideOut
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,7 +15,6 @@ import androidx.compose.foundation.text.selection.TextSelectionColors
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Clear
-import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -32,13 +26,10 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import ru.sr.nineteen.feature_rating.R
 import ru.sr.surrfit.presentation.model.RatingUiModel
-
 import ru.sr.surrfit.theme.SurfTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -59,7 +50,7 @@ fun SearchView(
         )
     ),
     onClickTrailingIcon: () -> Unit = {},
-    onClickItem: (RatingUiModel) -> Unit = {}
+    onClickItem: (RatingUiModel) -> Unit = {},
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
         OutlinedTextField(
@@ -87,7 +78,7 @@ fun SearchView(
             label = { Text(text = stringResource(id = hintId)) },
             colors = colors
         )
-        ExpectedSearchView(modifier = modifier, ratings = searchItems, value != ""){ rating->
+        ExpectedSearchView(modifier = modifier, ratings = searchItems, value != "") { rating ->
             onClickItem(rating)
         }
 
@@ -131,5 +122,4 @@ fun ExpectedSearchView(
             }
         }
     }
-
 }

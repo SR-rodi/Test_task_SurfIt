@@ -21,7 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import ru.sr.surrfit.domain.model.RatingSorter
-import ru.sr.surrfit.presentation.rating.viewmodel.RatingEvent
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingEvent
 import ru.sr.surrfit.theme.SurfTheme
 
 @Composable
@@ -37,7 +37,6 @@ fun RatingSorterView(startPadding: Dp = 16.dp, eventHandler: (RatingEvent) -> Un
             Spacer(modifier = Modifier.size(8.dp))
         }
     }
-
 }
 
 @Composable
@@ -57,7 +56,7 @@ fun RatingSorterItemView(sorter: String, isSelection: Boolean, onClickItem: () -
             modifier = Modifier.padding(8.dp),
             text = sorter,
             style = SurfTheme.fonts.h4.copy(
-                color = if (isSelection)   SurfTheme.colors.background else SurfTheme.colors.green
+                color = if (isSelection) SurfTheme.colors.background else SurfTheme.colors.green
             )
         )
     }

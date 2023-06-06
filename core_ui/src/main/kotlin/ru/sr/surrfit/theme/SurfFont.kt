@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 
-class SurfFont (
+class SurfFont(
     val h1: TextStyle = baseFontStyle(textSize = 48.sp, weight = FontWeight.ExtraBold),
     val h2: TextStyle = baseFontStyle(textSize = 32.sp, weight = FontWeight.Normal),
     val h3: TextStyle = baseFontStyle(textSize = 24.sp, weight = FontWeight.SemiBold),

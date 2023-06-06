@@ -5,6 +5,7 @@ import ru.sr.surrfit.dispatcherwrapper.SurfDispatcher
 import ru.sr.surrfit.domain.usecase.InsertRatingUseCase
 import ru.sr.surrfit.local.ItemsGeneration
 import ru.sr.surrfit.mapper.toDomain
+import ru.sr.surrfit.presentation.prefill.viewmodel.model.PrefillAction
 
 class PrefillViewModel(
     private val insertRatingUseCase: InsertRatingUseCase,
@@ -23,9 +24,4 @@ class PrefillViewModel(
             .insertItems(ItemsGeneration.getItems(counter).map { entity -> entity.toDomain() })
         viewAction = PrefillAction.OpenRatingScreen
     }
-}
-
-
-sealed interface PrefillAction {
-    object OpenRatingScreen : PrefillAction
 }

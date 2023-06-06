@@ -9,8 +9,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import ru.sr.surrfit.presentation.rating.viewmodel.RatingEvent
-import ru.sr.surrfit.presentation.rating.viewmodel.RatingState
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingEvent
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingState
 
 @Composable
 fun RatingView(state: RatingState, eventHandler: (RatingEvent) -> Unit) {
@@ -34,5 +34,4 @@ fun RatingView(state: RatingState, eventHandler: (RatingEvent) -> Unit) {
             eventHandler = eventHandler
         )
     }
-
 }

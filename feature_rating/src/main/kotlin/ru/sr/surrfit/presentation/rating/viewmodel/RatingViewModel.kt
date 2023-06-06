@@ -9,6 +9,9 @@ import ru.sr.surrfit.domain.model.RatingSorter
 import ru.sr.surrfit.domain.usecase.GetRatingUseCase
 import ru.sr.surrfit.mapper.toUi
 import ru.sr.surrfit.presentation.model.RatingUiModel
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingAction
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingEvent
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingState
 
 class RatingViewModel(
     private val getRatingUseCase: GetRatingUseCase,
@@ -54,23 +57,4 @@ class RatingViewModel(
         val ratingItems = getRatingUseCase.getItemsByFilter(sorter).map { domain -> domain.toUi() }
         viewState = viewState.copy(isLoading = false, items = ratingItems)
     }
-}
-
-data class RatingState(
-    val isLoading: Boolean = false,
-    val items: List<RatingUiModel> = emptyList(),
-    val search: String = "",
-    val searchItems: List<RatingUiModel> = emptyList(),
-)
-
-sealed interface RatingEvent {
-    object OnClearSearch : RatingEvent
-    object ResetAction : RatingEvent
-    class OnGetRatingBySorter(val sorter: RatingSorter) : RatingEvent
-    class OnSearch(val query: String) : RatingEvent
-    class OnClickItemRating(val ratingItem: RatingUiModel) : RatingEvent
-}
-
-sealed interface RatingAction {
-    class OpenDetailScreen(val ratingItem: RatingUiModel) : RatingAction
 }

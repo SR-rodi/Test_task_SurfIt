@@ -12,8 +12,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -23,7 +21,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import ru.sr.nineteen.feature_rating.R
 import ru.sr.surrfit.presentation.model.RatingUiModel
-import ru.sr.surrfit.presentation.rating.viewmodel.RatingEvent
+import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingEvent
 import ru.sr.surrfit.theme.SurfTheme
 
 @Composable
@@ -56,7 +54,7 @@ fun RatingItemView(
             .fillMaxWidth()
             .clip(shape = SurfTheme.shapes.large)
             .background(color = SurfTheme.colors.green)
-            .clickable { onClickItem(item)},
+            .clickable { onClickItem(item) },
     ) {
         Row(
             modifier = Modifier

@@ -5,17 +5,18 @@ import androidx.navigation.NavOptionsBuilder
 import ru.sr.surrfit.navigation.tree.NavigationTree
 
 internal fun NavOptionsBuilder.setPopUp(destination: String?, launchFlag: LaunchFlag) {
-    destination?:return
-        when (launchFlag) {
-            LaunchFlag.SimpleNavigation -> {}
+    destination ?: return
+    when (launchFlag) {
+        LaunchFlag.SimpleNavigation -> {}
 
-            LaunchFlag.ClearPrevious -> {
-                popUpTo(destination) {
-                    this.inclusive = true
-                }
+        LaunchFlag.ClearPrevious -> {
+            popUpTo(destination) {
+                this.inclusive = true
             }
-            LaunchFlag.ClearNavGraph ->  popUpTo(0)
         }
+
+        LaunchFlag.ClearNavGraph -> popUpTo(0)
+    }
 }
 
 
