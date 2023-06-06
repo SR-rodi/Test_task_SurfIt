@@ -43,5 +43,7 @@ object Dependencies {
 
     object Di {
         val koin = ("io.insert-koin:koin-android:$koinVersion")
+        val koinCompose = ("io.insert-koin:koin-core:$koinVersion")
+        val koinAndroid = ("io.insert-koin:koin-androidx-compose:$koinVersion")
     }
 }
