@@ -3,8 +3,6 @@ plugins {
     id (Plugins.library)
     id (Plugins.kotlin)
     id (Plugins.ksp)
-
-
 }
 
 android {

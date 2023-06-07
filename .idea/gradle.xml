@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/core_ui" />
             <option value="$PROJECT_DIR$/database" />
             <option value="$PROJECT_DIR$/feature_rating" />
+            <option value="$PROJECT_DIR$/feature_rating_widget" />
             <option value="$PROJECT_DIR$/nav_graph" />
           </set>
         </option>

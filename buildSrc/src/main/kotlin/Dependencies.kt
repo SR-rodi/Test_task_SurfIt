@@ -1,6 +1,8 @@
 import Dependencies.Versions.activityComposeVersion
 import Dependencies.Versions.composeBomVersion
 import Dependencies.Versions.coreKtxVersions
+import Dependencies.Versions.glanceVersions
+import Dependencies.Versions.gsonVersions
 import Dependencies.Versions.koinVersion
 import Dependencies.Versions.kotlinBoomVersions
 import Dependencies.Versions.lifecycleVersions
@@ -18,6 +20,8 @@ object Dependencies {
         const val navigateVersion = "2.5.3"
         const val activityComposeVersion = "1.7.2"
         const val composeBomVersion = "2022.10.00"
+        const val glanceVersions = "1.0.0-beta01"
+        const val gsonVersions = "2.10.1"
     }
 
     object Compose {
@@ -52,4 +56,14 @@ object Dependencies {
         val koinCompose = ("io.insert-koin:koin-core:$koinVersion")
         val koinAndroid = ("io.insert-koin:koin-androidx-compose:$koinVersion")
     }
+
+    object Glance {
+        val glance = ("androidx.glance:glance:$glanceVersions")
+        val glanceAppwidget = ("androidx.glance:glance-appwidget:$glanceVersions")
+    }
+
+    object Gson {
+        val gson = ("com.google.code.gson:gson:$gsonVersions")
+    }
+
 }

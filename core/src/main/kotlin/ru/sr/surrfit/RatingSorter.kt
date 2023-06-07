@@ -1,6 +1,6 @@
-package ru.sr.surrfit.domain.model
+package ru.sr.surrfit
 
-import ru.sr.nineteen.feature_rating.R
+import ru.sr.nineteen.core.R
 
 enum class RatingSorter(val fieldSorter: Int) {
     ID(R.string.registration_sorter_id),

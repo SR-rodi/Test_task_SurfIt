@@ -5,7 +5,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.job
 import ru.sr.surrfit.base.BaseViewModel
 import ru.sr.surrfit.dispatcherwrapper.SurfDispatcher
-import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.RatingSorter
 import ru.sr.surrfit.domain.usecase.GetRatingUseCase
 import ru.sr.surrfit.mapper.toUi
 import ru.sr.surrfit.presentation.model.RatingUiModel

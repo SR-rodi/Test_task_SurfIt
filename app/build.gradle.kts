@@ -47,6 +47,7 @@ dependencies {
     implementation(project(Module.core))
     implementation(project(Module.database))
     implementation(project(Module.featureRating))
+    implementation(project(Module.featureRatingWidget))
 
     implementation(Dependencies.Navigation.navigate)
 

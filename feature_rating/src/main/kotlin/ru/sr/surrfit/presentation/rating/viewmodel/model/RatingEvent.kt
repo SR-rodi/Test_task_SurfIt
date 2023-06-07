@@ -1,6 +1,6 @@
 package ru.sr.surrfit.presentation.rating.viewmodel.model
 
-import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.RatingSorter
 import ru.sr.surrfit.presentation.model.RatingUiModel
 
 sealed interface RatingEvent {
