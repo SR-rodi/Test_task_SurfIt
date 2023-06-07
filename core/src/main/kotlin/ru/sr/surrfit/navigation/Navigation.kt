@@ -19,7 +19,6 @@ internal fun NavOptionsBuilder.setPopUp(destination: String?, launchFlag: Launch
     }
 }
 
-
 fun <I> NavController.push(
     route: NavigationTree,
     params: I,
@@ -41,11 +40,4 @@ fun NavController.push(
     navigate(route.name) {
         setPopUp(currentDestination?.route, launchFlag)
     }
-}
-
-
-sealed interface LaunchFlag {
-    object SimpleNavigation : LaunchFlag
-    object ClearPrevious : LaunchFlag
-    object ClearNavGraph : LaunchFlag
 }
