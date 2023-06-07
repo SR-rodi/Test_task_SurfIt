@@ -17,12 +17,9 @@ abstract class SurfDatabase : RoomDatabase() {
     abstract fun ratingDao(): RatingDao
 
     companion object {
+        private const val DATABASE_NAME = "list"
         fun getInstance(context: Context): SurfDatabase {
-           return Room.databaseBuilder(
-                context,
-                SurfDatabase::class.java,
-                "list"
-            ).build()
+            return Room.databaseBuilder(context, SurfDatabase::class.java, DATABASE_NAME).build()
         }
     }
 }

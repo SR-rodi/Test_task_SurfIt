@@ -1,6 +1,5 @@
 package ru.sr.surfit.di
 
-import androidx.room.Room
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.bind
 import org.koin.core.module.dsl.factoryOf
@@ -22,17 +21,9 @@ fun mainModule() =
     )
 
 fun locationDataBaseModule() = module {
-    single {
-        Room.databaseBuilder(
-            get(),
-            SurfDatabase::class.java,
-            "list"
-        ).build()
-    }
+    single {SurfDatabase.getInstance(get()) }
 
-    single {
-        get<SurfDatabase>().ratingDao()
-    }
+    single { get<SurfDatabase>().ratingDao() }
 }
 
 fun firstRunListenerModule() = module {

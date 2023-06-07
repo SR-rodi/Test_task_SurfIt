@@ -24,7 +24,8 @@ fun ItemWidgetView(items: ListRatingWidgetModal) {
         items.items.forEach { item ->
             Spacer(GlanceModifier.size(4.dp))
             Row(
-                modifier = GlanceModifier.fillMaxWidth().background(Color(0xFFC4F3F3)).cornerRadius(16.dp).padding(4.dp),
+                modifier = GlanceModifier.fillMaxWidth().background(Color(0xFFC4F3F3))
+                    .cornerRadius(16.dp).padding(4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(text = item.id.toString())
@@ -33,24 +34,22 @@ fun ItemWidgetView(items: ListRatingWidgetModal) {
                 Spacer(GlanceModifier.size(4.dp))
                 Column {
                     Row {
-                        Column {
-                            Text(text = "Step", style = TextStyle(fontSize = 10.sp))
-                            Text(text = item.stepCount.toString())
-                        }
+                        ColumnItems("Step",item.stepCount.toString())
                         Spacer(GlanceModifier.size(8.dp))
-                        Column {
-                            Text(text = "Mode", style = TextStyle(fontSize = 10.sp))
-                            Text(text = item.mode)
-                        }
+                        ColumnItems("Mode",item.mode)
                     }
-                    Column {
-                        Text(text = "email", style = TextStyle(fontSize = 10.sp))
-                        Text(text = item.email)
-                    }
+                    ColumnItems("email",item.email)
                 }
                 Spacer(GlanceModifier.size(4.dp))
             }
-
         }
+    }
+}
+
+@Composable
+fun ColumnItems(title:String,description:String){
+    Column {
+        Text(text = title, style = TextStyle(fontSize = 10.sp))
+        Text(text = description)
     }
 }

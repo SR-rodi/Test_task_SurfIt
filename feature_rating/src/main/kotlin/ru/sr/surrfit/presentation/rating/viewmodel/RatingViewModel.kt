@@ -42,10 +42,8 @@ class RatingViewModel(
             val items = viewState.items.filter { model ->
                 model.userName.lowercase().contains(query.lowercase())
             }
-
             viewState = viewState.copy(searchItems = items)
         }
-
     }
 
     private fun onClearSearchState() {

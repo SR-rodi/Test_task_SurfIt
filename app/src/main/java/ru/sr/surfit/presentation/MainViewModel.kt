@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import ru.sr.surrfit.firstrunlistener.FirstRunListener
 import ru.sr.surrfit.navigation.tree.NavigationTree
 
-
 class MainViewModel(
     private val firstRunListener: FirstRunListener,
 ) : ViewModel() {
