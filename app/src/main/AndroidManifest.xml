@@ -25,7 +25,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="ru.sr.surrfit.widjet.SurfWidgetReceiver" android:exported="true">
+        <receiver android:name=".presentation.widget.SurfWidgetReceiver" android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>

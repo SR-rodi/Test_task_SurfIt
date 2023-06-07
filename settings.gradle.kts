@@ -19,4 +19,5 @@ include (":core_ui")
 include (":database")
 include (":nav_graph")
 include (":feature_rating")
+include (":feature_rating_widget")
 

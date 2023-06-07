@@ -47,15 +47,13 @@ dependencies {
     implementation(project(Module.core))
     implementation(project(Module.database))
     implementation(project(Module.featureRating))
+    implementation(project(Module.featureRatingWidget))
 
     implementation(Dependencies.Navigation.navigate)
 
     implementation(Dependencies.Di.koin)
 
     implementation(Dependencies.Database.room)
-
-    implementation("androidx.glance:glance:1.0.0-beta01")
-    implementation("androidx.glance:glance-appwidget:1.0.0-beta01")
 
     implementation(Dependencies.Core.coreKtx)
     implementation(platform(Dependencies.Core.kotlinBoom))

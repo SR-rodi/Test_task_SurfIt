@@ -1,4 +1,4 @@
-package ru.sr.surrfit.widjet.view
+package ru.sr.surfit.presentation.view
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -12,12 +12,12 @@ import androidx.glance.layout.Spacer
 import androidx.glance.layout.size
 import androidx.glance.layout.width
 import androidx.glance.unit.ColorProvider
-import ru.sr.surrfit.domain.model.RatingSorter
-import ru.sr.surrfit.widjet.SurfWidgetSortedEmailActionCallBack
-import ru.sr.surrfit.widjet.SurfWidgetSortedIdActionCallBack
-import ru.sr.surrfit.widjet.SurfWidgetSortedModeActionCallBack
-import ru.sr.surrfit.widjet.SurfWidgetSortedNameActionCallBack
-import ru.sr.surrfit.widjet.SurfWidgetSortedStepActionCallBack
+import ru.sr.surfit.presentation.widget.SurfWidgetSortedEmailActionCallBack
+import ru.sr.surfit.presentation.widget.SurfWidgetSortedIdActionCallBack
+import ru.sr.surfit.presentation.widget.SurfWidgetSortedModeActionCallBack
+import ru.sr.surfit.presentation.widget.SurfWidgetSortedNameActionCallBack
+import ru.sr.surfit.presentation.widget.SurfWidgetSortedStepActionCallBack
+import ru.sr.surrfit.RatingSorter
 
 @Composable
 fun SortedWidgetView(position: Int) {

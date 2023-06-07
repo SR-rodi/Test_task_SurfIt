@@ -28,7 +28,6 @@ android {
 
 dependencies {
 
-
     implementation(project(Module.core))
 
     implementation(Dependencies.Navigation.navigate)

@@ -1,4 +1,4 @@
-package ru.sr.surrfit.widjet.view
+package ru.sr.surfit.presentation.view
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -16,7 +16,7 @@ import androidx.glance.layout.padding
 import androidx.glance.layout.size
 import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
-import ru.sr.surrfit.widjet.ListRatingWidgetModal
+import ru.sr.surfit.data.ListRatingWidgetModal
 
 @Composable
 fun ItemWidgetView(items: ListRatingWidgetModal) {

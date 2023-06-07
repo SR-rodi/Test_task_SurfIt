@@ -20,7 +20,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.RatingSorter
 import ru.sr.surrfit.presentation.rating.viewmodel.model.RatingEvent
 import ru.sr.surrfit.theme.SurfTheme
 

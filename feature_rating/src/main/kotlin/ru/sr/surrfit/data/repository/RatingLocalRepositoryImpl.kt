@@ -1,7 +1,7 @@
 package ru.sr.surrfit.data.repository
 
 import ru.sr.surrfit.domain.model.RatingDomainModel
-import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.RatingSorter
 import ru.sr.surrfit.domain.repository.RatingLocalRepository
 import ru.sr.surrfit.local.dao.RatingDao
 import ru.sr.surrfit.mapper.toDomain

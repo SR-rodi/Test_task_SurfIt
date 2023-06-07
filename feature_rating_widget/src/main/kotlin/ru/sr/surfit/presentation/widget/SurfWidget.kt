@@ -1,4 +1,4 @@
-package ru.sr.surrfit.widjet
+package ru.sr.surfit.presentation.widget
 
 import android.content.Context
 import androidx.compose.ui.unit.dp
@@ -13,16 +13,12 @@ import androidx.glance.layout.Alignment
 import androidx.glance.layout.Column
 import androidx.glance.layout.Row
 import androidx.glance.layout.Spacer
-import androidx.glance.layout.fillMaxWidth
 import androidx.glance.layout.size
-import androidx.glance.text.Text
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import ru.sr.surrfit.domain.model.RatingSorter
-import ru.sr.surrfit.local.db.SurfDatabase
-import ru.sr.surrfit.mapper.toWidget
-import ru.sr.surrfit.widjet.view.ItemWidgetView
-import ru.sr.surrfit.widjet.view.SortedWidgetView
+import ru.sr.surfit.mapper.getRatingUserInfoWidget
+import ru.sr.surfit.mapper.toWidget
+import ru.sr.surfit.presentation.view.ItemWidgetView
+import ru.sr.surfit.presentation.view.SortedWidgetView
+import ru.sr.surrfit.RatingSorter
 
 object SurfWidget : GlanceAppWidget() {
 
@@ -46,21 +42,4 @@ object SurfWidget : GlanceAppWidget() {
             }
         }
     }
-}
-
-suspend fun getRatingUserInfoWidget(
-    context: Context,
-    sorter: RatingSorter,
-): ListRatingWidgetModal {
-    val dao = SurfDatabase.getInstance(context).ratingDao()
-    val newList =  withContext(Dispatchers.IO) {
-        when (sorter) {
-            RatingSorter.ID -> dao.getAllSortedById()
-            RatingSorter.STEP -> dao.getAllSortedByStep()
-            RatingSorter.MODE -> dao.getAllSortedByMode()
-            RatingSorter.USER_NAME -> dao.getAllSortedByName()
-            RatingSorter.EMAIL -> dao.getAllSortedByEmail()
-        }.take(3).map { ratingEntity -> ratingEntity.toWidget() }
-    }
-    return ListRatingWidgetModal(newList)
 }

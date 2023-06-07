@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import org.koin.androidx.compose.koinViewModel
-import ru.sr.surrfit.domain.model.RatingSorter
+import ru.sr.surrfit.RatingSorter
 import ru.sr.surrfit.navigation.push
 import ru.sr.surrfit.navigation.tree.NavigationTree
 import ru.sr.surrfit.presentation.rating.compose.view.RatingView

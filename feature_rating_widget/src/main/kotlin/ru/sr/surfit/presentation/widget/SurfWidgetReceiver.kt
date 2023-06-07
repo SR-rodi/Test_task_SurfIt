@@ -1,4 +1,4 @@
-package ru.sr.surrfit.widjet
+package ru.sr.surfit.presentation.widget
 
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
