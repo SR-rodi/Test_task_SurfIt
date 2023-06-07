@@ -3,6 +3,7 @@ plugins {
     id (Plugins.library)
     id (Plugins.kotlin)
     id ("kotlin-parcelize")
+    id ("org.jetbrains.kotlin.plugin.serialization") version "1.7.20"
 }
 
 android {
@@ -29,6 +30,12 @@ android {
 }
 
 dependencies {
+
+    implementation("androidx.glance:glance:1.0.0-beta01")
+    implementation("androidx.glance:glance-appwidget:1.0.0-beta01")
+    implementation ("com.google.code.gson:gson:2.10.1")
+
+    implementation(Dependencies.Database.room)
 
     implementation(project(Module.coreUi))
     implementation(project(Module.core))

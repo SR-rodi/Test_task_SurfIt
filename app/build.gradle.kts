@@ -54,6 +54,9 @@ dependencies {
 
     implementation(Dependencies.Database.room)
 
+    implementation("androidx.glance:glance:1.0.0-beta01")
+    implementation("androidx.glance:glance-appwidget:1.0.0-beta01")
+
     implementation(Dependencies.Core.coreKtx)
     implementation(platform(Dependencies.Core.kotlinBoom))
     implementation(Dependencies.Core.lifecycle)
