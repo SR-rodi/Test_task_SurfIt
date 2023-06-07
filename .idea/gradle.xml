@@ -13,6 +13,12 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/core_ui" />
+            <option value="$PROJECT_DIR$/database" />
+            <option value="$PROJECT_DIR$/feature_rating" />
+            <option value="$PROJECT_DIR$/feature_rating_widget" />
+            <option value="$PROJECT_DIR$/nav_graph" />
           </set>
         </option>
       </GradleProjectSettings>

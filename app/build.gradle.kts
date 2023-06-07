@@ -42,6 +42,19 @@ android {
 
 dependencies {
 
+    implementation(project(Module.navGraph))
+    implementation(project(Module.coreUi))
+    implementation(project(Module.core))
+    implementation(project(Module.database))
+    implementation(project(Module.featureRating))
+    implementation(project(Module.featureRatingWidget))
+
+    implementation(Dependencies.Navigation.navigate)
+
+    implementation(Dependencies.Di.koin)
+
+    implementation(Dependencies.Database.room)
+
     implementation(Dependencies.Core.coreKtx)
     implementation(platform(Dependencies.Core.kotlinBoom))
     implementation(Dependencies.Core.lifecycle)
